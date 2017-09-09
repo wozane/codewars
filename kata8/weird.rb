@@ -12,5 +12,10 @@ def weirdcase(string)
   end.join(' ')
 end
 
+#better solution 
+
+def weirdcase string
+  string.gsub /\w{,2}/, &:capitalize
+end
 
 p weirdcase("Thi is a test case")
